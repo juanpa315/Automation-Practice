@@ -1,0 +1,233 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 5,
+        "name": "Enter the website of the new experience and access the login form",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 17220804932,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I access the new experience website",
+            "match": {
+              "location": "LoginSteps.ingreso_al_aplicativo_newExperience()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5573498411,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I click SignIn option",
+            "match": {
+              "location": "LoginSteps.selecciono_la_opción_SignIn()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 10,
+        "name": "Login successful on the New Experience website",
+        "description": "",
+        "id": "test-login-functionality;login-successful-on-the-new-experience-website",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6004657890,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I enter my email",
+            "match": {
+              "location": "LoginSteps.i_enter_my_email()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 402378900,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I enter my Password",
+            "match": {
+              "location": "LoginSteps.i_enter_my_Password()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5425698044,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I click on the SignIn button",
+            "match": {
+              "location": "LoginSteps.i_click_on_the_SignIn_buttom()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2237114033,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "The website load my user account",
+            "match": {
+              "location": "LoginSteps.the_website_load_my_user_account()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5448715738,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I can log out",
+            "match": {
+              "location": "LoginSteps.i_can_log_out()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@allLoginPage"
+          },
+          {
+            "name": "@loginSuccessful"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "Enter the website of the new experience and access the login form",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 7685024522,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I access the new experience website",
+            "match": {
+              "location": "LoginSteps.ingreso_al_aplicativo_newExperience()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[@class\u003d\u0027login\u0027] (tried for 10 second(s) with 500 milliseconds interval)\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)\n\tat page.BasePage.Find(BasePage.java:49)\n\tat page.BasePage.clicElement(BasePage.java:61)\n\tat page.LoginPage.btnSignIn(LoginPage.java:24)\n\tat steps.LoginSteps.selecciono_la_opción_SignIn(LoginSteps.java:24)\n\tat ✽.I click SignIn option(src/test/resources/features/Login.feature:7)\nCaused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //a[@class\u003d\u0027login\u0027]\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027juan-Inspiron-14-3467\u0027, ip: \u0027127.0.1.1\u0027, os.name: \u0027Linux\u0027, os.arch: \u0027amd64\u0027, os.version: \u00275.13.0-40-generic\u0027, java.version: \u002717.0.2\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 99.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220330194208, moz:geckodriverVersion: 0.30.0, moz:headless: false, moz:processID: 19857, moz:profile: /tmp/rust_mozprofileBRx8lK, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 5.13.0-40-generic, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: d9d3c21d-5229-4785-a609-fabf63c0d68d\n*** Element info: {Using\u003dxpath, value\u003d//a[@class\u003d\u0027login\u0027]}\n\tat jdk.internal.reflect.GeneratedConstructorAccessor20.newInstance(Unknown Source)\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\n\tat org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)\n\tat org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)\n\tat page.BasePage.Find(BasePage.java:49)\n\tat page.BasePage.clicElement(BasePage.java:61)\n\tat page.LoginPage.btnSignIn(LoginPage.java:24)\n\tat steps.LoginSteps.selecciono_la_opción_SignIn(LoginSteps.java:24)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\n\tat cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:49)\n\tat cucumber.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:63)\n\tat cucumber.runner.TestStep.run(TestStep.java:49)\n\tat cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:43)\n\tat cucumber.runner.TestCase.run(TestCase.java:44)\n\tat cucumber.runner.Runner.runPickle(Runner.java:40)\n\tat cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:124)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:65)\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\n\tat cucumber.api.junit.Cucumber$1.evaluate(Cucumber.java:133)\n\tat org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:529)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:756)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)\n",
+              "duration": 10429443860,
+              "status": "failed"
+            },
+            "line": 7,
+            "name": "I click SignIn option",
+            "match": {
+              "location": "LoginSteps.selecciono_la_opción_SignIn()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 19,
+        "name": "login Failed on the New Experience website",
+        "description": "",
+        "id": "test-login-functionality;login-failed-on-the-new-experience-website",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1739048,
+              "status": "skipped"
+            },
+            "line": 20,
+            "name": "I enter a invalid email",
+            "match": {
+              "location": "LoginSteps.when_i_enter_a_invalid_email()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 486703,
+              "status": "skipped"
+            },
+            "line": 21,
+            "name": "I enter a password",
+            "match": {
+              "location": "LoginSteps.i_Insert_pwd()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 465477,
+              "status": "skipped"
+            },
+            "line": 22,
+            "name": "I click on the signin button",
+            "match": {
+              "location": "LoginSteps.i_click_on_the_signin_buttom()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 785739,
+              "status": "skipped"
+            },
+            "line": 23,
+            "name": "The system does not allow to login successfully",
+            "match": {
+              "location": "LoginSteps.the_website_does_not_allow_to_login_successfully()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@allLoginPage"
+          },
+          {
+            "name": "@loginFailed"
+          }
+        ]
+      }
+    ],
+    "name": "Test login functionality",
+    "description": "",
+    "id": "test-login-functionality",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/Login.feature",
+    "tags": [
+      {
+        "name": "@allLoginPage",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
