@@ -1,126 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Test login functionality" tests="2" skipped="0" failures="2" errors="0" timestamp="2022-04-26T15:51:30" hostname="juan-Inspiron-14-3467" time="44.252">
+<testsuite name="Test login functionality" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-06-02T23:54:32" hostname="juan-Inspiron-14-3467" time="21.975">
   <properties/>
-  <testcase name="Login successful on the New Experience website" classname="Test login functionality" time="33.727">
-    <failure message="java.lang.AssertionError: SignIn Failed" type="java.lang.AssertionError">java.lang.AssertionError: SignIn Failed
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.assertTrue(Assert.java:41)
-	at steps.LoginSteps.the_website_load_my_user_account(LoginSteps.java:47)
-	at ✽.The website load my user account(src/test/resources/features/Login.feature:14)
-</failure>
-  </testcase>
-  <testcase name="login Failed on the New Experience website" classname="Test login functionality" time="10.524">
-    <failure message="org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[@class='login'] (tried for 10 second(s) with 500 milliseconds interval)" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[@class='login'] (tried for 10 second(s) with 500 milliseconds interval)
-	at app//org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at app//page.BasePage.Find(BasePage.java:48)
-	at app//page.BasePage.clicElement(BasePage.java:60)
-	at app//page.LoginPage.btnSignIn(LoginPage.java:24)
-	at app//steps.LoginSteps.selecciono_la_opción_SignIn(LoginSteps.java:24)
-	at ✽.I click SignIn option(src/test/resources/features/Login.feature:7)
-Caused by: org.openqa.selenium.NoSuchWindowException: Browsing context has been discarded
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'juan-Inspiron-14-3467', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.13.0-40-generic', java.version: '17.0.2'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 99.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220330194208, moz:geckodriverVersion: 0.30.0, moz:headless: false, moz:processID: 14755, moz:profile: /tmp/rust_mozprofilepqvVM2, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 5.13.0-40-generic, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 5b4004d6-611f-4fb5-865e-aefe54074295
-*** Element info: {Using=xpath, value=//a[@class='login']}
-	at java.base@17.0.2/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base@17.0.2/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base@17.0.2/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base@17.0.2/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base@17.0.2/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at app//org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at app//org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at app//org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at app//org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at app//org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at app//org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	at app//page.BasePage.Find(BasePage.java:48)
-	at app//page.BasePage.clicElement(BasePage.java:60)
-	at app//page.LoginPage.btnSignIn(LoginPage.java:24)
-	at app//steps.LoginSteps.selecciono_la_opción_SignIn(LoginSteps.java:24)
-	at java.base@17.0.2/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base@17.0.2/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base@17.0.2/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base@17.0.2/java.lang.reflect.Method.invoke(Method.java:568)
-	at app//cucumber.runtime.Utils$1.call(Utils.java:26)
-	at app//cucumber.runtime.Timeout.timeout(Timeout.java:16)
-	at app//cucumber.runtime.Utils.invoke(Utils.java:20)
-	at app//cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:49)
-	at app//cucumber.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)
-	at app//cucumber.runner.TestStep.executeStep(TestStep.java:63)
-	at app//cucumber.runner.TestStep.run(TestStep.java:49)
-	at app//cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:43)
-	at app//cucumber.runner.TestCase.run(TestCase.java:44)
-	at app//cucumber.runner.Runner.runPickle(Runner.java:40)
-	at app//cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)
-	at app//cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)
-	at app//cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)
-	at app//org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at app//org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at app//org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at app//org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at app//org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at app//org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at app//cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)
-	at app//cucumber.api.junit.Cucumber.runChild(Cucumber.java:124)
-	at app//cucumber.api.junit.Cucumber.runChild(Cucumber.java:65)
-	at app//org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at app//org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at app//org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at app//org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at app//org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at app//cucumber.api.junit.Cucumber$1.evaluate(Cucumber.java:133)
-	at app//org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at app//org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
-	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
-	at java.base@17.0.2/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base@17.0.2/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base@17.0.2/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base@17.0.2/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
-	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-</failure>
-  </testcase>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[1650988290682	geckodriver	INFO	Listening on 127.0.0.1:19421
-1650988290860	mozrunner::runner	INFO	Running command: "/usr/lib/firefox/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofilepqvVM2"
+  <testcase name="Login successful on the New Experience website" classname="Test login functionality" time="17.068"/>
+  <testcase name="login Failed on the New Experience website" classname="Test login functionality" time="4.906"/>
+  <system-out><![CDATA[se encontró el texto? true
+el resultado del booleano es: true
+]]></system-out>
+  <system-err><![CDATA[1654214073271	geckodriver	INFO	Listening on 127.0.0.1:28819
+1654214073479	mozrunner::runner	INFO	Running command: "/usr/lib/firefox/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofileY1kY3C"
 ATTENTION: default value of option mesa_glthread overridden by environment.
 ATTENTION: default value of option mesa_glthread overridden by environment.
 ATTENTION: default value of option mesa_glthread overridden by environment.
 ATTENTION: default value of option mesa_glthread overridden by environment.
-1650988291946	Marionette	INFO	Marionette enabled
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilepqvVM2/search.json.mozlz4", (void 0)))
+1654214074491	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileY1kY3C/search.json.mozlz4", (void 0)))
 JavaScript error: resource://gre/modules/TelemetryUtils.jsm, line 154: TypeError: date is undefined
-1650988294181	Marionette	INFO	Listening on port 46377
-1650988294285	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-Apr 26, 2022 10:51:34 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+1654214076737	Marionette	INFO	Listening on port 33279
+1654214076841	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+Jun 02, 2022 6:54:36 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://automationpractice.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://automationpractice.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://automationpractice.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://automationpractice.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://automationpractice.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://automationpractice.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://automationpractice.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
 console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://automationpractice.com"
 JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
 console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://automationpractice.com"

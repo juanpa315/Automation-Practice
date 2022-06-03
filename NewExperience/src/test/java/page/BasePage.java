@@ -61,6 +61,11 @@ public class BasePage {
         Find(locator).click();
     }
 
+    public void clicElement2(String locator) {
+        driver.findElement(By.xpath(locator)).click();
+
+    }
+
     // Metodo para ingresar información en un campo de texto
     public void write(String campoBusqueda, String criterioBusqueda) {
         // limpiar texto antes de escribir en el campo

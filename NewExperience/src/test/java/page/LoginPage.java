@@ -2,14 +2,7 @@ package page;
 
 public class LoginPage extends BasePage {
 
-    private String btnSignIn = "//a[@class='login']";
-    private String emailAddress = "//input[@id='email']";
-    private String password = "//input[@id='passwd']";
-    private String sigInButton = "//button[@id='SubmitLogin']";
-    private String alert = "//p[contains(text(),'There is 1 error')]";
-    private String txtAccount = "//h1[contains(text(),'My account')]";
-    private String txtAuthentication = "//h1[@class='page-heading']";
-    private String logOut = "//header/div[2]/div[1]/div[1]/nav[1]/div[2]";
+    Locators locators = new Locators();
 
     public LoginPage() {
         super(driver);
@@ -21,34 +14,34 @@ public class LoginPage extends BasePage {
     }
 
     public void btnSignIn() {
-        clicElement(btnSignIn);
+        clicElement(locators.btnSignIn);
     }
 
     public void insertEmail(String datoPrueba) {
-        clicElement(emailAddress);
-        write(emailAddress, datoPrueba);
+        clicElement(locators.emailAddress);
+        write(locators.emailAddress, datoPrueba);
     }
 
     public void insertPass(String datoPrueba) {
-        clicElement(password);
-        write(password, datoPrueba);
+        clicElement(locators.password);
+        write(locators.password, datoPrueba);
     }
 
     public void signIn() {
-        clicElement(sigInButton);
+        clicElement(locators.sigInButton);
     }
 
     public boolean validateSignIn() {
-        return verifyVisibleElement(txtAccount);
+        return verifyVisibleElement(locators.txtAccount);
     }
 
     public boolean logOut() {
-        clicElement(logOut);
-        return verifyVisibleElement(txtAuthentication);
+        clicElement(locators.logOut);
+        return verifyVisibleElement(locators.txtAuthentication);
     }
 
     public boolean loginFailed() {
-        return verifyVisibleElement(alert);
+        return verifyVisibleElement(locators.alert);
     }
 
 }

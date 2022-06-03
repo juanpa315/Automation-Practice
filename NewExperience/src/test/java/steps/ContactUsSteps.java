@@ -66,7 +66,7 @@ public class ContactUsSteps {
         // Log out successful
         boolean response = contactUsPage.logOut();
         System.out.println("The response is: " + response);
-        Assert.assertTrue("The log out was failed", response);
+        Assert.assertFalse("The log out was failed", response);
     }
 
     // Steps when the user sends the request without to completing the required data
@@ -81,7 +81,7 @@ public class ContactUsSteps {
         // Log out successful
         boolean responseLogOut = contactUsPage.logOut();
         System.out.println("The response is: " + responseLogOut);
-        Assert.assertTrue("The log out was failed", responseLogOut);
+        Assert.assertFalse("The log out was failed", responseLogOut);
 
     }
 }

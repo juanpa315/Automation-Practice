@@ -27,13 +27,13 @@ public class CreateAccountSteps {
     @When("^Digito mi correo eléctronico \"([^\"]*)\"$")
     public void digito_mi_correo_eléctronico(String email) {
         createAccountPage.insertEmail(email);
-        boolean response = createAccountPage.validate_if_email_has_already_registered();
-        Assert.assertFalse("The email address has already been registered", response);
     }
 
     @And("^hago clic en el botón Create an acount$")
     public void hago_clic_en_el_botón_Create_an_acount() {
         createAccountPage.btnCreateAcount();
+        boolean response = createAccountPage.validate_if_email_has_already_registered();
+        Assert.assertFalse("The email address has already been registered", response);
     }
 
     @And("^Completo la información solicitada por el sistema$")
@@ -64,7 +64,7 @@ public class CreateAccountSteps {
             createAccountPage.insertHomePhone(data.get(id).get(18).trim());
             createAccountPage.insertMobilePhone(data.get(id).get(19).trim());
             createAccountPage.insertAliasAddress(data.get(id).get(20).trim());
-            createAccountPage.registerUser();
+            // createAccountPage.registerUser();
         }
     }
 
