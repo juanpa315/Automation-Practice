@@ -1,18 +1,19 @@
 package steps;
 
-import java.util.List;
+import java.util.NoSuchElementException;
 
 import org.junit.Assert;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import io.cucumber.datatable.DataTable;
 import page.ContactUsPage;
+import util.ExcelUtils;
 
 public class ContactUsSteps {
 
     ContactUsPage contactUsPage = new ContactUsPage();
+    ExcelUtils excelUtils = new ExcelUtils("contactUs");
 
     @Given("^I access the new experience page$")
     public void i_access_the_new_experience_page() {
@@ -33,15 +34,22 @@ public class ContactUsSteps {
     }
 
     @When("^I complete all the required input$")
-    public void i_complete_all_the_required_input(DataTable dtDatosForm) {
-        List<List<String>> data = dtDatosForm.asLists();
-        for (int id = 1; id < data.size(); id++) {
-            contactUsPage.selectHeading(data.get(id).get(0).trim());
-            contactUsPage.validateEmail(data.get(id).get(1).trim());
-            contactUsPage.selectOrder(data.get(id).get(2).trim());
-            contactUsPage.uploadFile(data.get(id).get(3).trim());
-            contactUsPage.writeMessage(data.get(id).get(4).trim());
+    public void i_complete_all_the_required_input() {
+        try {
+            int size = excelUtils.getRowCount();
+            for (int id = 1; id < size; id++) {
+                System.out.println("el id es: " + id);
+                contactUsPage.selectHeading(excelUtils.getStringCellData(id, 1));
+                contactUsPage.validateEmail(excelUtils.getStringCellData(id, 2));
+                contactUsPage.selectOrder(excelUtils.getStringCellData(id, 3));
+                contactUsPage.uploadFile(excelUtils.getStringCellData(id, 4));
+                contactUsPage.writeMessage(excelUtils.getStringCellData(id, 5));
+            }
+        } catch (NoSuchElementException e) {
+            System.out.println(e.getMessage());
+            System.out.println("Se a generado un error de tipo: " + e.getClass());
         }
+
     }
 
     @And("^I click on the send buttom$")

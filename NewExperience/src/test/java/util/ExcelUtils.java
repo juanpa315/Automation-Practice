@@ -53,12 +53,12 @@ public class ExcelUtils {
 
     }
 
-    public void getRowCount() throws IOException {
+    public int getRowCount() {
 
         System.out.println("the sheet 1 is: " + sheet);
         int rowCount = sheet.getPhysicalNumberOfRows();
         System.out.println("No of Rows: " + rowCount);
-
+        return rowCount;
     }
 
     public void readExcel() {

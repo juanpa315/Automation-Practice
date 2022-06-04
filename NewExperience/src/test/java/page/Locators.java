@@ -49,7 +49,7 @@ public class Locators {
     public String txtContactUs = "//h1[contains(text(),' - Contact us')]";
     public String heading = "//select[@id='id_contact']";
     public String emailC = "//input[@id='email']";
-    public String orderReference = "//div[@class='selector']/select[@name='id_order']";
+    public String orderReference = "//select[@name='id_order']";
     public String chooseFile = "//input[@id='fileUpload']";
     public String txtInputFile = "//span[@class='filename']";
     public String message = "//textarea[@id='message']";

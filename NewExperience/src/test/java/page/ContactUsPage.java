@@ -44,7 +44,7 @@ public class ContactUsPage extends BasePage {
     }
 
     public void selectOrder(String datoPrueba) {
-        selectElementByValue(locators.orderReference, datoPrueba);
+        selectElementByVisibleText(locators.orderReference, datoPrueba);
     }
 
     public void writeMessage(String datoPrueba) {

@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 8710832117,
+              "duration": 9393324735,
               "status": "passed"
             },
             "line": 5,
@@ -23,7 +23,7 @@
           },
           {
             "result": {
-              "duration": 5134689017,
+              "duration": 5480981801,
               "status": "passed"
             },
             "line": 6,
@@ -45,7 +45,7 @@
           },
           {
             "result": {
-              "duration": 1500743891,
+              "duration": 1749246938,
               "status": "passed"
             },
             "line": 7,
@@ -58,41 +58,71 @@
         ]
       },
       {
-        "line": 21,
-        "name": "As an admin, I need clients not to be able to make requests without completing the mandatory information in the contact us form.",
+        "line": 10,
+        "name": "As user, I need to make a successful request on the contact us page",
         "description": "",
-        "id": "page-contact-functionality;as-an-admin--i-need-clients-not-to-be-able-to-make-requests-without-completing-the-mandatory-information-in-the-contact-us-form.",
+        "id": "page-contact-functionality;as-user--i-need-to-make-a-successful-request-on-the-contact-us-page",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 1013796340,
+              "duration": 3772735223,
               "status": "passed"
             },
-            "line": 23,
-            "name": "I click on the send buttom",
+            "line": 12,
+            "name": "I complete all the required input",
             "match": {
-              "location": "ContactUsSteps.i_click_on_the_send_buttom()"
+              "location": "ContactUsSteps.i_complete_all_the_required_input()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 11927918807,
+              "duration": 2957531691,
               "status": "passed"
             },
-            "line": 24,
-            "name": "The system displays a failed message alert.",
+            "line": 13,
+            "name": "I click on the send buttom",
             "match": {
-              "location": "ContactUsSteps.the_system_displays_a_failed_message_alert()"
+              "location": "ContactUsSteps.i_click_on_the_send_buttom()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 94620856,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "The system displays a successful request message",
+            "match": {
+              "location": "ContactUsSteps.the_system_displays_a_successful_request_message()"
             },
             "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 15955931279,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I can return to the home page \"http://automationpractice.com/index.php\" and logout on the website",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://automationpractice.com/index.php",
+                  "offset": 31
+                }
+              ],
+              "location": "ContactUsSteps.i_can_return_to_the_home_page(String)"
+            },
+            "keyword": "And "
           }
         ],
         "tags": [
           {
-            "name": "@AlternateCaseContacUs"
+            "name": "@SuccesfulCaseContacUs"
           },
           {
             "name": "@ContactUs"
