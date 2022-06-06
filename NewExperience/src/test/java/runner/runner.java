@@ -12,7 +12,7 @@ import page.BasePage;
         features = "src/test/resources/features", glue = "steps", plugin = {
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
                 "json:target/cucumber-reports.json" }, monochrome = true, tags = {
-                        "@SuccesfulCaseContacUs" })
+                        "@SuccesfulCase" })
 
 public class runner {
 

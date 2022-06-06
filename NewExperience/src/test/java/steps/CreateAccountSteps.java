@@ -1,18 +1,18 @@
 package steps;
 
-import java.util.List;
-
+import java.io.IOException;
 import org.junit.Assert;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import io.cucumber.datatable.DataTable;
 import page.CreateAccountPage;
+import util.ExcelUtils;
 
 public class CreateAccountSteps {
 
     CreateAccountPage createAccountPage = new CreateAccountPage();
+    ExcelUtils sheetCreateAccount = new ExcelUtils("createAccount");
 
     @Given("^I get into the new experience web site$")
     public void ingreso_al_aplicativo_newExperience() {
@@ -24,8 +24,9 @@ public class CreateAccountSteps {
         createAccountPage.btnSignIn();
     }
 
-    @When("^Digito mi correo eléctronico \"([^\"]*)\"$")
-    public void digito_mi_correo_eléctronico(String email) {
+    @When("^Digito mi correo eléctronico$")
+    public void digito_mi_correo_eléctronico() {
+        String email = sheetCreateAccount.getStringCellData(1, 3);
         createAccountPage.insertEmail(email);
     }
 
@@ -37,34 +38,35 @@ public class CreateAccountSteps {
     }
 
     @And("^Completo la información solicitada por el sistema$")
-    public void completo_la_información_solicitada_por_el_sistema(DataTable dtDatosForm) {
-        List<List<String>> data = dtDatosForm.asLists();
+    public void completo_la_información_solicitada_por_el_sistema() throws IOException {
 
-        for (int id = 1; id < data.size(); id++) {
-            createAccountPage.Gender(data.get(id).get(0).trim());
-            createAccountPage.insertFirstName(data.get(id).get(1).trim());
-            createAccountPage.insertLastName(data.get(id).get(2).trim());
-            createAccountPage.validateEmail(data.get(id).get(3).trim());
-            createAccountPage.insertPassword(data.get(id).get(4).trim());
-            createAccountPage.selectDay(data.get(id).get(5).trim());
-            createAccountPage.selectMonth(data.get(id).get(6).trim());
-            createAccountPage.selectYear(data.get(id).get(7).trim());
+        int size = sheetCreateAccount.getRowCount();
+
+        for (int id = 1; id < size; id++) {
+            createAccountPage.Gender(sheetCreateAccount.getStringCellData(id, 0));
+            createAccountPage.insertFirstName(sheetCreateAccount.getStringCellData(id, 1));
+            createAccountPage.insertLastName(sheetCreateAccount.getStringCellData(id, 2));
+            createAccountPage.validateEmail(sheetCreateAccount.getStringCellData(id, 3));
+            createAccountPage.insertPassword(sheetCreateAccount.getStringCellData(id, 4));
+            createAccountPage.selectDay(sheetCreateAccount.getObjectCellData(id, 5));
+            createAccountPage.selectMonth(sheetCreateAccount.getObjectCellData(id, 6));
+            createAccountPage.selectYear(sheetCreateAccount.getObjectCellData(id, 7));
             createAccountPage.checkSesion();
             createAccountPage.checkOferts();
-            createAccountPage.validateFirstName(data.get(id).get(8).trim());
-            createAccountPage.validateLastName2(data.get(id).get(9).trim());
-            createAccountPage.insertCompany(data.get(id).get(10).trim());
-            createAccountPage.insertAddress(data.get(id).get(11).trim());
-            createAccountPage.insertAddress2(data.get(id).get(12).trim());
-            createAccountPage.insertCity(data.get(id).get(13).trim());
-            createAccountPage.selectState(data.get(id).get(14).trim());
-            createAccountPage.insertCodePostal(data.get(id).get(15).trim());
-            createAccountPage.selectCountry(data.get(id).get(16).trim());
-            createAccountPage.insertAditionalInformation(data.get(id).get(17).trim());
-            createAccountPage.insertHomePhone(data.get(id).get(18).trim());
-            createAccountPage.insertMobilePhone(data.get(id).get(19).trim());
-            createAccountPage.insertAliasAddress(data.get(id).get(20).trim());
-            // createAccountPage.registerUser();
+            createAccountPage.validateFirstName(sheetCreateAccount.getStringCellData(id, 8));
+            createAccountPage.validateLastName2(sheetCreateAccount.getStringCellData(id, 9));
+            createAccountPage.insertCompany(sheetCreateAccount.getStringCellData(id, 10));
+            createAccountPage.insertAddress(sheetCreateAccount.getStringCellData(id, 11));
+            createAccountPage.insertAddress2(sheetCreateAccount.getStringCellData(id, 12));
+            createAccountPage.insertCity(sheetCreateAccount.getStringCellData(id, 13));
+            createAccountPage.selectState(sheetCreateAccount.getStringCellData(id, 14));
+            createAccountPage.insertCodePostal(sheetCreateAccount.getObjectCellData(id, 15));
+            createAccountPage.selectCountry(sheetCreateAccount.getStringCellData(id, 16));
+            createAccountPage.insertAditionalInformation(sheetCreateAccount.getStringCellData(id, 17));
+            createAccountPage.insertHomePhone(sheetCreateAccount.getObjectCellData(id, 18));
+            createAccountPage.insertMobilePhone(sheetCreateAccount.getObjectCellData(id, 19));
+            createAccountPage.insertAliasAddress(sheetCreateAccount.getStringCellData(id, 20));
+            createAccountPage.registerUser();
         }
     }
 
@@ -85,8 +87,9 @@ public class CreateAccountSteps {
 
     // Steps for the alternate test case
 
-    @When("^I type my email \"([^\"]*)\"$")
-    public void i_type_my_email(String email) {
+    @When("^I type my email$")
+    public void i_type_my_email() {
+        String email = sheetCreateAccount.getStringCellData(1, 21);
         createAccountPage.insertEmail(email);
     }
 

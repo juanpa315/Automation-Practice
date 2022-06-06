@@ -7,13 +7,13 @@ public class ExcelUtilTest {
     public static void main(String[] args) throws IOException {
 
         // String excelPath = "src/test/resources/data/Data.xlsx";
-        String scheetName = "login";
+        String scheetName = "createAccount";
 
         ExcelUtils excelUtils = new ExcelUtils(scheetName);
 
         excelUtils.getRowCount();
-        excelUtils.getStringCellData(2, 0);
-        excelUtils.getStringCellData(2, 1);
+        excelUtils.getStringCellData(1, 0);
+        excelUtils.getStringCellData(1, 1);
         excelUtils.readExcel();
 
     }

@@ -64,15 +64,21 @@ public class CreateAccountPage extends BasePage {
         write(locators.newPassword, datoPrueba);
     }
 
-    public void selectDay(String datoPrueba) {
+    public void selectDay(Object dataExcel) {
+        String datoPrueba = String.valueOf(dataExcel);
+        System.out.println("The Day is: " + dataExcel);
         selectElementByValue(locators.fechaDia, datoPrueba);
     }
 
-    public void selectMonth(String datoPrueba) {
+    public void selectMonth(Object dataExcel) {
+        String datoPrueba = String.valueOf(dataExcel);
+        System.out.println("The Month is: " + dataExcel);
         selectElementByValue(locators.fechaMes, datoPrueba);
     }
 
-    public void selectYear(String datoPrueba) {
+    public void selectYear(Object dataExcel) {
+        String datoPrueba = String.valueOf(dataExcel);
+        System.out.println("The Year is: " + dataExcel);
         selectElementByValue(locators.fechaYear, datoPrueba);
     }
 
@@ -112,7 +118,9 @@ public class CreateAccountPage extends BasePage {
         selectElementByVisibleText(locators.state, datoPrueba);
     }
 
-    public void insertCodePostal(String datoPrueba) {
+    public void insertCodePostal(Object dataExcel) {
+        String datoPrueba = String.valueOf(dataExcel);
+        System.out.println("The postal code is: " + dataExcel);
         write(locators.codePostal, datoPrueba);
     }
 
@@ -124,11 +132,15 @@ public class CreateAccountPage extends BasePage {
         write(locators.aditionalInformation, datoPrueba);
     }
 
-    public void insertHomePhone(String datoPrueba) {
+    public void insertHomePhone(Object dataExcel) {
+        String datoPrueba = String.valueOf(dataExcel);
+        System.out.println("The home Phone is: " + dataExcel);
         write(locators.homePhone, datoPrueba);
     }
 
-    public void insertMobilePhone(String datoPrueba) {
+    public void insertMobilePhone(Object dataExcel) {
+        String datoPrueba = String.valueOf(dataExcel);
+        System.out.println("The mobile phone is: " + dataExcel);
         write(locators.mobilePhone, datoPrueba);
     }
 

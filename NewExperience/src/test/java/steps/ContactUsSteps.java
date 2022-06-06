@@ -13,15 +13,19 @@ import util.ExcelUtils;
 public class ContactUsSteps {
 
     ContactUsPage contactUsPage = new ContactUsPage();
-    ExcelUtils excelUtils = new ExcelUtils("contactUs");
 
     @Given("^I access the new experience page$")
     public void i_access_the_new_experience_page() {
         contactUsPage.getUrl();
     }
 
-    @And("^I login on the system with email \"([^\"]*)\" and password \"([^\"]*)\"$")
-    public void i_login_on_the_system_with_email_and_password(String email, String psw) {
+    @And("^I login on the system with email and password$")
+    public void i_login_on_the_system_with_email_and_password() {
+
+        ExcelUtils sheetLogin = new ExcelUtils("login");
+
+        String email = sheetLogin.getStringCellData(1, 0);
+        String psw = sheetLogin.getStringCellData(1, 1);
         boolean response = contactUsPage.signIn(email, psw);
         Assert.assertTrue("Unable Login", response);
 
@@ -36,6 +40,7 @@ public class ContactUsSteps {
     @When("^I complete all the required input$")
     public void i_complete_all_the_required_input() {
         try {
+            ExcelUtils excelUtils = new ExcelUtils("contactUs");
             int size = excelUtils.getRowCount();
             for (int id = 1; id < size; id++) {
                 System.out.println("el id es: " + id);
@@ -63,15 +68,19 @@ public class ContactUsSteps {
         Assert.assertTrue("the request was not sent successfully", response);
     }
 
-    @And("^I can return to the home page \"([^\"]*)\" and logout on the website$")
-    public void i_can_return_to_the_home_page(String url) {
+    @And("^I can return to the home page and logout on the website$")
+    public void i_can_return_to_the_home_page() {
 
-        // return successfully to home page
+        // get url to the home page.
+        ExcelUtils sheetHomePage = new ExcelUtils("homePage");
+        String url = sheetHomePage.getStringCellData(0, 0);
+
+        // return successfully to home page.
         String currentUrl = contactUsPage.returnHomePage();
         System.out.println("The current url is: " + currentUrl);
         Assert.assertEquals(url, currentUrl);
 
-        // Log out successful
+        // Log out successful.
         boolean response = contactUsPage.logOut();
         System.out.println("The response is: " + response);
         Assert.assertFalse("The log out was failed", response);

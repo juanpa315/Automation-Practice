@@ -108,6 +108,15 @@ public class BasePage {
 
     }
 
+    /*
+     * public void selectElementIntByVisibleText(String locator, int datoPrueba) {
+     * Select s = new Select(driver.findElement(By.xpath(locator)));
+     * s.selectByValue(datoPrueba);
+     * s.selectByIndex(datoPrueba);
+     * 
+     * }
+     */
+
     public boolean verifyVisibleElement(String locator) {
         boolean element;
         try {

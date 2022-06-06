@@ -1,57 +1,35 @@
 [
   {
-    "line": 1,
+    "line": 2,
     "elements": [
       {
-        "line": 3,
-        "name": "Enter the website of the new experience and access the contact us page",
+        "line": 5,
+        "name": "Enter the website of the new experience and access the registration form",
         "description": "",
         "type": "background",
         "keyword": "Background",
         "steps": [
           {
             "result": {
-              "duration": 9393324735,
+              "duration": 9857384887,
               "status": "passed"
             },
-            "line": 5,
-            "name": "I access the new experience page",
+            "line": 6,
+            "name": "I get into the new experience web site",
             "match": {
-              "location": "ContactUsSteps.i_access_the_new_experience_page()"
+              "location": "CreateAccountSteps.ingreso_al_aplicativo_newExperience()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 5480981801,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "I login on the system with email \"juanpaosorio199@gmail.com\" and password \"prueba\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "juanpaosorio199@gmail.com",
-                  "offset": 34
-                },
-                {
-                  "val": "prueba",
-                  "offset": 75
-                }
-              ],
-              "location": "ContactUsSteps.i_login_on_the_system_with_email_and_password(String,String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 1749246938,
+              "duration": 2180476593,
               "status": "passed"
             },
             "line": 7,
-            "name": "I access the contact us page",
+            "name": "I select SignIn option",
             "match": {
-              "location": "ContactUsSteps.i_access_the_contact_us_page()"
+              "location": "CreateAccountSteps.selecciono_la_opción_SignIn()"
             },
             "keyword": "And "
           }
@@ -59,82 +37,98 @@
       },
       {
         "line": 10,
-        "name": "As user, I need to make a successful request on the contact us page",
+        "name": "Como cliente de la tienda, requiero crear una cuenta en la pagina para realizar la compra de un producto",
         "description": "",
-        "id": "page-contact-functionality;as-user--i-need-to-make-a-successful-request-on-the-contact-us-page",
+        "id": "create-user-account;como-cliente-de-la-tienda--requiero-crear-una-cuenta-en-la-pagina-para-realizar-la-compra-de-un-producto",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 3772735223,
+              "duration": 585423702,
               "status": "passed"
             },
             "line": 12,
-            "name": "I complete all the required input",
+            "name": "Digito mi correo eléctronico",
             "match": {
-              "location": "ContactUsSteps.i_complete_all_the_required_input()"
+              "location": "CreateAccountSteps.digito_mi_correo_eléctronico()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 2957531691,
-              "status": "passed"
+              "error_message": "java.lang.AssertionError: The email address has already been registered\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.assertTrue(Assert.java:41)\n\tat org.junit.Assert.assertFalse(Assert.java:64)\n\tat steps.CreateAccountSteps.hago_clic_en_el_botón_Create_an_acount(CreateAccountSteps.java:37)\n\tat ✽.hago clic en el botón Create an acount(src/test/resources/features/CreateAccount.feature:13)\n",
+              "duration": 969200478,
+              "status": "failed"
             },
             "line": 13,
-            "name": "I click on the send buttom",
+            "name": "hago clic en el botón Create an acount",
             "match": {
-              "location": "ContactUsSteps.i_click_on_the_send_buttom()"
+              "location": "CreateAccountSteps.hago_clic_en_el_botón_Create_an_acount()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 94620856,
-              "status": "passed"
+              "duration": 401766,
+              "status": "skipped"
             },
             "line": 14,
-            "name": "The system displays a successful request message",
+            "name": "Completo la información solicitada por el sistema",
             "match": {
-              "location": "ContactUsSteps.the_system_displays_a_successful_request_message()"
+              "location": "CreateAccountSteps.completo_la_información_solicitada_por_el_sistema()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 765060,
+              "status": "skipped"
+            },
+            "line": 15,
+            "name": "El sistema crea mi cuenta de usuario",
+            "match": {
+              "location": "CreateAccountSteps.el_sistema_crea_mi_cuenta_de_usuario()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 15955931279,
-              "status": "passed"
+              "duration": 394434,
+              "status": "skipped"
             },
-            "line": 15,
-            "name": "I can return to the home page \"http://automationpractice.com/index.php\" and logout on the website",
+            "line": 16,
+            "name": "I close my session on the website",
             "match": {
-              "arguments": [
-                {
-                  "val": "http://automationpractice.com/index.php",
-                  "offset": 31
-                }
-              ],
-              "location": "ContactUsSteps.i_can_return_to_the_home_page(String)"
+              "location": "CreateAccountSteps.I_close_my_session_on_the_website()"
             },
             "keyword": "And "
           }
         ],
         "tags": [
           {
-            "name": "@SuccesfulCaseContacUs"
+            "name": "@Regresion"
           },
           {
-            "name": "@ContactUs"
+            "name": "@SuccesfulCase"
           }
         ]
       }
     ],
-    "name": "Page contact functionality",
-    "description": "",
-    "id": "page-contact-functionality",
+    "name": "Create user account",
+    "description": "    User login functionality for the new experience site",
+    "id": "create-user-account",
     "keyword": "Feature",
-    "uri": "src/test/resources/features/ContactUS.feature",
-    "tags": []
+    "uri": "src/test/resources/features/CreateAccount.feature",
+    "tags": [
+      {
+        "name": "@Regresion",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
   }
 ]
