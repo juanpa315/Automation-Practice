@@ -50,13 +50,6 @@ public class BasePage {
 
     }
 
-    /*
-     * private WebElement findById(String locator) {
-     * return
-     * wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(locator)));
-     * }
-     */
-
     public void clicElement(String locator) {
         Find(locator).click();
     }
@@ -108,15 +101,6 @@ public class BasePage {
 
     }
 
-    /*
-     * public void selectElementIntByVisibleText(String locator, int datoPrueba) {
-     * Select s = new Select(driver.findElement(By.xpath(locator)));
-     * s.selectByValue(datoPrueba);
-     * s.selectByIndex(datoPrueba);
-     * 
-     * }
-     */
-
     public boolean verifyVisibleElement(String locator) {
         boolean element;
         try {
@@ -137,12 +121,6 @@ public class BasePage {
             element = false;
         }
         return element;
-
-        /*
-         * Boolean txtAccount2 = driver.findElement(By.xpath(locator)).isDisplayed();
-         * System.out.println("El elemento es visible: " + txtAccount);
-         * return txtAccount2;
-         */
 
     }
 
