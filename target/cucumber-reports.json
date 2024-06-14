@@ -1,0 +1,134 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 5,
+        "name": "Enter the website of the new experience and access the registration form",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 10096096857,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I get into the new experience web site",
+            "match": {
+              "location": "CreateAccountSteps.ingreso_al_aplicativo_newExperience()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1109417357,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I select SignIn option",
+            "match": {
+              "location": "CreateAccountSteps.selecciono_la_opción_SignIn()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 10,
+        "name": "Como cliente de la tienda, requiero crear una cuenta en la pagina para realizar la compra de un producto",
+        "description": "",
+        "id": "create-user-account;como-cliente-de-la-tienda--requiero-crear-una-cuenta-en-la-pagina-para-realizar-la-compra-de-un-producto",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 414378186,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "Digito mi correo eléctronico",
+            "match": {
+              "location": "CreateAccountSteps.digito_mi_correo_eléctronico()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 10588925772,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "hago clic en el botón Create an acount",
+            "match": {
+              "location": "CreateAccountSteps.hago_clic_en_el_botón_Create_an_acount()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@id\u003d\u0027uniform-optin\u0027] (tried for 10 second(s) with 500 milliseconds interval)\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)\n\tat page.BasePage.Find(BasePage.java:49)\n\tat page.BasePage.clicElement(BasePage.java:54)\n\tat page.CreateAccountPage.checkOferts(CreateAccountPage.java:92)\n\tat steps.CreateAccountSteps.completo_la_información_solicitada_por_el_sistema(CreateAccountSteps.java:55)\n\tat ✽.Completo la información solicitada por el sistema(src/test/resources/features/CreateAccount.feature:14)\nCaused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[@id\u003d\u0027uniform-optin\u0027]\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027juan-IdeaPad-5-14ALC05\u0027, ip: \u0027127.0.1.1\u0027, os.name: \u0027Linux\u0027, os.arch: \u0027amd64\u0027, os.version: \u00275.15.0-112-generic\u0027, java.version: \u002711.0.23\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 126.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20240526221752, moz:geckodriverVersion: 0.30.0, moz:headless: false, moz:platformVersion: 5.15.0-112-generic, moz:processID: 63709, moz:profile: /tmp/rust_mozprofilebBnn8i, moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (X11; Linux x86...}\nSession ID: 9438a8be-1969-4320-9b44-ca8a49561a5a\n*** Element info: {Using\u003dxpath, value\u003d//div[@id\u003d\u0027uniform-optin\u0027]}\n\tat jdk.internal.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\n\tat org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)\n\tat org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)\n\tat page.BasePage.Find(BasePage.java:49)\n\tat page.BasePage.clicElement(BasePage.java:54)\n\tat page.CreateAccountPage.checkOferts(CreateAccountPage.java:92)\n\tat steps.CreateAccountSteps.completo_la_información_solicitada_por_el_sistema(CreateAccountSteps.java:55)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\n\tat cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:49)\n\tat cucumber.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:63)\n\tat cucumber.runner.TestStep.run(TestStep.java:49)\n\tat cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:43)\n\tat cucumber.runner.TestCase.run(TestCase.java:44)\n\tat cucumber.runner.Runner.runPickle(Runner.java:40)\n\tat cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:124)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:65)\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\n\tat cucumber.api.junit.Cucumber$1.evaluate(Cucumber.java:133)\n\tat org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:93)\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:529)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:757)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)\n",
+              "duration": 11946585311,
+              "status": "failed"
+            },
+            "line": 14,
+            "name": "Completo la información solicitada por el sistema",
+            "match": {
+              "location": "CreateAccountSteps.completo_la_información_solicitada_por_el_sistema()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 770521,
+              "status": "skipped"
+            },
+            "line": 15,
+            "name": "El sistema crea mi cuenta de usuario",
+            "match": {
+              "location": "CreateAccountSteps.el_sistema_crea_mi_cuenta_de_usuario()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 478718,
+              "status": "skipped"
+            },
+            "line": 16,
+            "name": "I close my session on the website",
+            "match": {
+              "location": "CreateAccountSteps.I_close_my_session_on_the_website()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Regresion"
+          },
+          {
+            "name": "@SuccesfulCaseCreateAccount"
+          }
+        ]
+      }
+    ],
+    "name": "Create user account",
+    "description": "    User login functionality for the new experience site",
+    "id": "create-user-account",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/CreateAccount.feature",
+    "tags": [
+      {
+        "name": "@Regresion",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
