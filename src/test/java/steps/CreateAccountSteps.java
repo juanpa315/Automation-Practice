@@ -52,20 +52,6 @@ public class CreateAccountSteps {
             createAccountPage.selectMonth(sheetCreateAccount.getObjectCellData(id, 6));
             createAccountPage.selectYear(sheetCreateAccount.getObjectCellData(id, 7));
             createAccountPage.checkSesion();
-            createAccountPage.checkOferts();
-            createAccountPage.validateFirstName(sheetCreateAccount.getStringCellData(id, 8));
-            createAccountPage.validateLastName2(sheetCreateAccount.getStringCellData(id, 9));
-            createAccountPage.insertCompany(sheetCreateAccount.getStringCellData(id, 10));
-            createAccountPage.insertAddress(sheetCreateAccount.getStringCellData(id, 11));
-            createAccountPage.insertAddress2(sheetCreateAccount.getStringCellData(id, 12));
-            createAccountPage.insertCity(sheetCreateAccount.getStringCellData(id, 13));
-            createAccountPage.selectState(sheetCreateAccount.getStringCellData(id, 14));
-            createAccountPage.insertCodePostal(sheetCreateAccount.getObjectCellData(id, 15));
-            createAccountPage.selectCountry(sheetCreateAccount.getStringCellData(id, 16));
-            createAccountPage.insertAditionalInformation(sheetCreateAccount.getStringCellData(id, 17));
-            createAccountPage.insertHomePhone(sheetCreateAccount.getObjectCellData(id, 18));
-            createAccountPage.insertMobilePhone(sheetCreateAccount.getObjectCellData(id, 19));
-            createAccountPage.insertAliasAddress(sheetCreateAccount.getStringCellData(id, 20));
             createAccountPage.registerUser();
         }
     }

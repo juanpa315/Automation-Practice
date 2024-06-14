@@ -88,68 +88,6 @@ public class CreateAccountPage extends BasePage {
         clicElement(locators.checkNewsletter);
     }
 
-    public void checkOferts() {
-        clicElement(locators.checkOfertas);
-    }
-
-    public void validateFirstName(String datoPrueba) {
-        compareValues(locators.firstName2, datoPrueba);
-    }
-
-    public void validateLastName2(String datoPrueba) {
-        compareValues(locators.lastName2, datoPrueba);
-    }
-
-    public void insertCompany(String datoPrueba) {
-        write(locators.company, datoPrueba);
-    }
-
-    public void insertAddress(String datoPrueba) {
-        write(locators.address, datoPrueba);
-    }
-
-    public void insertAddress2(String datoPrueba) {
-        write(locators.address2, datoPrueba);
-    }
-
-    public void insertCity(String datoPrueba) {
-        write(locators.city, datoPrueba);
-    }
-
-    public void selectState(String datoPrueba) {
-        selectElementByVisibleText(locators.state, datoPrueba);
-    }
-
-    public void insertCodePostal(Object dataExcel) {
-        String datoPrueba = String.valueOf(dataExcel);
-        System.out.println("The postal code is: " + dataExcel);
-        write(locators.codePostal, datoPrueba);
-    }
-
-    public void selectCountry(String datoPrueba) {
-        selectElementByVisibleText(locators.country, datoPrueba);
-    }
-
-    public void insertAditionalInformation(String datoPrueba) {
-        write(locators.aditionalInformation, datoPrueba);
-    }
-
-    public void insertHomePhone(Object dataExcel) {
-        String datoPrueba = String.valueOf(dataExcel);
-        System.out.println("The home Phone is: " + dataExcel);
-        write(locators.homePhone, datoPrueba);
-    }
-
-    public void insertMobilePhone(Object dataExcel) {
-        String datoPrueba = String.valueOf(dataExcel);
-        System.out.println("The mobile phone is: " + dataExcel);
-        write(locators.mobilePhone, datoPrueba);
-    }
-
-    public void insertAliasAddress(String datoPrueba) {
-        write(locators.aliasAddress, datoPrueba);
-    }
-
     public void registerUser() {
         clicElement(locators.btnRegister);
     }

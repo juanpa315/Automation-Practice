@@ -1,4 +1,4 @@
-@Regresion
+@Regresion @CreateAccount
 Feature: Create user account
     User login functionality for the new experience site
 
