@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 6824310171,
+              "duration": 7134201295,
               "status": "passed"
             },
             "line": 6,
@@ -23,7 +23,7 @@
           },
           {
             "result": {
-              "duration": 1102670953,
+              "duration": 1006111677,
               "status": "passed"
             },
             "line": 7,
@@ -45,55 +45,55 @@
         "steps": [
           {
             "result": {
-              "duration": 409893539,
+              "duration": 497756835,
               "status": "passed"
             },
             "line": 12,
-            "name": "Digito mi correo eléctronico",
+            "name": "I type my email",
             "match": {
-              "location": "CreateAccountSteps.digito_mi_correo_eléctronico()"
+              "location": "CreateAccountSteps.i_type_my_email()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 10564127287,
+              "duration": 10518048997,
               "status": "passed"
             },
             "line": 13,
-            "name": "hago clic en el botón Create an acount",
+            "name": "I click on the create account button",
             "match": {
-              "location": "CreateAccountSteps.hago_clic_en_el_botón_Create_an_acount()"
+              "location": "CreateAccountSteps.i_click_on_the_create_account_button()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 7221097518,
+              "duration": 7097262530,
               "status": "passed"
             },
             "line": 14,
-            "name": "Completo la información solicitada por el sistema",
+            "name": "I enter the data into the systemm",
             "match": {
-              "location": "CreateAccountSteps.completo_la_información_solicitada_por_el_sistema()"
+              "location": "CreateAccountSteps.I_enter_the_data_into_the_systemm()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 1554171181,
+              "duration": 1541692733,
               "status": "passed"
             },
             "line": 15,
-            "name": "El sistema crea mi cuenta de usuario",
+            "name": "The system create my user account",
             "match": {
-              "location": "CreateAccountSteps.el_sistema_crea_mi_cuenta_de_usuario()"
+              "location": "CreateAccountSteps.The_system_create_my_user_account()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 1334861868,
+              "duration": 1190554745,
               "status": "passed"
             },
             "line": 16,
@@ -113,108 +113,6 @@
           },
           {
             "name": "@SuccesfulCaseCreateAccount"
-          }
-        ]
-      },
-      {
-        "line": 5,
-        "name": "Enter the website of the new experience and access the registration form",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 622873364,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "I get into the new experience web site",
-            "match": {
-              "location": "CreateAccountSteps.ingreso_al_aplicativo_newExperience()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 828352269,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "I select SignIn option",
-            "match": {
-              "location": "CreateAccountSteps.selecciono_la_opción_SignIn()"
-            },
-            "keyword": "And "
-          }
-        ]
-      },
-      {
-        "line": 19,
-        "name": "As a store owner, I want to make sure that customers cannot register without completing the required fields on the registration form.",
-        "description": "",
-        "id": "create-user-account;as-a-store-owner--i-want-to-make-sure-that-customers-cannot-register-without-completing-the-required-fields-on-the-registration-form.",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 373049262,
-              "status": "passed"
-            },
-            "line": 21,
-            "name": "I type my email",
-            "match": {
-              "location": "CreateAccountSteps.i_type_my_email()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 10503279046,
-              "status": "passed"
-            },
-            "line": 22,
-            "name": "I click on the create account button",
-            "match": {
-              "location": "CreateAccountSteps.i_click_on_the_create_account_button()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 771289659,
-              "status": "passed"
-            },
-            "line": 23,
-            "name": "I click on the register button",
-            "match": {
-              "location": "CreateAccountSteps.i_click_on_the_register_button()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 22157701,
-              "status": "passed"
-            },
-            "line": 24,
-            "name": "The system does not allow to create the user account",
-            "match": {
-              "location": "CreateAccountSteps.the_system_does_not_allow_to_create_the_user_account()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@Regresion"
-          },
-          {
-            "name": "@CreateAccount"
-          },
-          {
-            "name": "@AlternateCase"
           }
         ]
       }
